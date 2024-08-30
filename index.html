@@ -14,13 +14,14 @@
   <body>
     <div class="app-container">
       <div class="sidebar">
-        <h2>Upload your Photo</h2>
+        <h2>1. Upload your Photo</h2>
         <div class="upload-section">
           <input type="file" id="imageUpload" accept="image/*" />
+          <h2 id="cropTxt" style="display: none">2. Crop your image</h2>
           <button id="cropBtn" style="display: none">Crop Image</button>
         </div>
 
-        <h2>Select a Frame</h2>
+        <h2>3. Select a Frame</h2>
         <div class="frames">
           <img
             src="assets/frames/frame1.png"
@@ -35,8 +36,8 @@
             alt="Frame 2"
           />
         </div>
-
-        <button id="saveBtn">Save Image</button>
+        <h2>4. Download</h2>
+        <button id="saveBtn">Download</button>
       </div>
 
       <div class="main-content">

@@ -3,6 +3,7 @@ const imagePreview = document.getElementById("imagePreview");
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 const cropBtn = document.getElementById("cropBtn");
+const cropTxt = document.getElementById("cropTxt");
 let cropper = null;
 let selectedFrame = null;
 let croppedImageData = null; // Store the cropped image data here
@@ -35,6 +36,7 @@ imageUpload.addEventListener("change", function () {
 
     // Show crop button
     cropBtn.style.display = "block";
+    cropTxt.style.display = "block";
   };
   reader.readAsDataURL(this.files[0]);
 });
@@ -66,6 +68,7 @@ cropBtn.addEventListener("click", function () {
   // Destroy the cropper instance after cropping
   cropper.destroy();
   cropBtn.style.display = "none";
+  cropTxt.style.display = "none";
 });
 
 document.getElementById("saveBtn").addEventListener("click", function () {
