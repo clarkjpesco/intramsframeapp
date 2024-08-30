@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>White Eagle VS. Black Panther</title>
+    <!-- Cropper.js CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-container">
+      <div class="sidebar">
+        <h2>Upload your Photo</h2>
+        <div class="upload-section">
+          <input type="file" id="imageUpload" accept="image/*" />
+          <button id="cropBtn" style="display: none">Crop Image</button>
+        </div>
+
+        <h2>Select a Frame</h2>
+        <div class="frames">
+          <img
+            src="assets/frames/frame1.png"
+            class="frame-option"
+            onclick="applyFrame('assets/frames/frame1.png')"
+            alt="Frame 1"
+          />
+          <img
+            src="assets/frames/frame2.png"
+            class="frame-option"
+            onclick="applyFrame('assets/frames/frame2.png')"
+            alt="Frame 2"
+          />
+        </div>
+
+        <button id="saveBtn">Save Image</button>
+      </div>
+
+      <div class="main-content">
+        <div class="image-preview">
+          <img id="imagePreview" style="max-width: 100%; display: none" />
+          <canvas id="canvas"></canvas>
+        </div>
+      </div>
+    </div>
+    <!-- Cropper.js Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
